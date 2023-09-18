@@ -10,21 +10,21 @@ const links = [
     name: 'About',
     href: '/about',
   },
+  //{
+  //  ref: '03',
+  //  name: 'Galleries',
+  //  href: '/galleries',
+  //},
   {
     ref: '03',
-    name: 'Galleries',
-    href: '/galleries',
-  },
-  {
-    ref: '04',
     name: 'Contact',
     href: '/contact',
   },
-  {
-    ref: '05',
-    name: 'Journal',
-    href: '/journal',
-  },
+  //{
+  //  ref: '05',
+  //  name: 'Journal',
+  //  href: '/journal',
+  //},
 ];
 ---
 
@@ -43,13 +43,15 @@ const links = [
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
         <span class="sr-only">Graziano Casto.</span>
-        <img
+        <!--<img
           class="h-8 w-auto"
           width="65"
           height="40"
           :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
           alt="Stone"
-        />
+        />-->
+        <h1 class="lg:text-9xl text-4xl font-medium tracking-tight sm:text-2xl">Graziano Casto</h1>
+        <h2 class="lg:text-9xl text-xl font-medium tracking-tight sm:text-xs">Street Photography & Reportage</h1>
       </a>
     </div>
 
