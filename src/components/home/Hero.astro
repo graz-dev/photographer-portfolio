@@ -1,5 +1,64 @@
 ---
-import Slideshow from './Slideshow.astro';
+import MasonryGallery from './MasonryGallery.astro';
+
+const slidePhotos = [
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
+    alt: "Hero picture",
+  },
+  {
+    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
+    alt: "Hero picture",
+  },
+];
 ---
 
 <section class="py-16 sm:py-20">
@@ -15,7 +74,8 @@ import Slideshow from './Slideshow.astro';
           </p>
         </div>
       </div>
-      <Slideshow></Slideshow>
+      <MasonryGallery
+        photos={slidePhotos}></MasonryGallery>
     </div>
   </div>
 </section>

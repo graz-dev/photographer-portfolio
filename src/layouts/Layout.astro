@@ -1,9 +1,9 @@
 ---
-import '@fontsource/inter/latin-400.css';
-import '@fontsource/inter/latin-500.css';
-import { ViewTransitions } from 'astro:transitions';
-import Footer from '../components/layout/Footer.astro';
-import Header from '../components/layout/Header.astro';
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/layout/Footer.astro";
+import Header from "../components/layout/Header.astro";
 
 interface Props {
   description: string;
@@ -39,20 +39,36 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
+
+      body {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      img {
+        pointer-events: none;
+      }
     </style>
     <script>
-      import Alpine from 'alpinejs';
-      import collapse from '@alpinejs/collapse';
+      import Alpine from "alpinejs";
+      import collapse from "@alpinejs/collapse";
+
+      window.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
 
       Alpine.plugin(collapse);
 
-      Alpine.store('theme', {
+      Alpine.store("theme", {
         init() {
           this.isDark = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
+            if (
+              typeof localStorage !== "undefined" &&
+              localStorage.getItem("theme")
+            ) {
+              return localStorage.getItem("theme") === "dark";
             }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
               return true;
             }
             return false;
@@ -63,7 +79,7 @@ const { description, title } = Astro.props;
 
         toggle() {
           this.isDark = !this.isDark;
-          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+          localStorage.setItem("theme", this.isDark ? "dark" : "light");
         },
       });
 

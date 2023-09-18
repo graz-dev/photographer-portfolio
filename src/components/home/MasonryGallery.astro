@@ -1,0 +1,133 @@
+---
+
+interface Props {
+  photos: any[];
+}
+
+const { photos } = Astro.props;
+
+---
+
+<section class="py-16 sm:py-20">
+  <div class="masonry-gallery">
+    {
+      photos.map((photo) => (
+        <div class="grid-item lightbox-image">
+          <img
+            class="hover-image"
+            src={photo.src}
+            alt={photo.alt}
+            loading="lazy"
+          />
+          <div class="image-title">{photo.alt}</div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="lightbox" id="lightbox">
+    <span class="close-button" id="close-button">&times;</span>
+    <img src="" alt="" class="lightbox-content" id="lightbox-content" />
+  </div>
+</section>
+<style>
+  .masonry-gallery {
+    column-count: 3; /* Numero di colonne desiderato */
+    column-gap: 10px; /* Spaziatura tra colonne */
+  }
+
+  .grid-item {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px; /* Spaziatura tra le immagini verticalmente */
+    break-inside: avoid; /* Evita che le immagini siano spezzate tra le colonne */
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .image-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .grid-item:hover img {
+    opacity: 0.7;
+  }
+
+  .grid-item:hover .image-title {
+    opacity: 1;
+  }
+
+  /* Styles for the lightbox container */
+/* CSS per il lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+</style>
+<script>
+// Get references to DOM elements
+const lightbox = document.getElementById("lightbox");
+const lightboxContent = document.getElementById("lightbox-content");
+const closeButton = document.getElementById("close-button");
+const lightboxImages = document.querySelectorAll(".lightbox-image");
+
+// Function to open the lightbox
+function openLightbox(event) {
+    const clickedImage = event.currentTarget.querySelector('img');
+    const imageUrl = clickedImage.src;
+
+    lightboxContent.src = imageUrl;
+    lightbox.style.display = "block";
+}
+
+// Function to close the lightbox
+function closeLightbox() {
+    lightbox.style.display = "none";
+}
+
+// Attach click event listeners
+lightboxImages.forEach(image => {
+    image.addEventListener("click", openLightbox);
+});
+
+closeButton.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", closeLightbox);
+
+</script>
