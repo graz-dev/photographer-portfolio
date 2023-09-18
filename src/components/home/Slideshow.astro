@@ -1,0 +1,72 @@
+---
+const slidePhotos = [
+  {
+    src: 'https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9',
+    alt: 'Hero picture',
+  },
+  {
+    src: 'https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy',
+    alt: 'Hero picture',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="slideshow-container">
+    {
+      slidePhotos.map((photo) => (
+        <div class="mySlides fade">
+          <img class="h-full w-full rounded-3xl" src={photo.src} alt={photo.alt} />
+        </div>
+      ))
+    }
+  </div>
+</section>
+<style>
+  /* Stili per il container del slideshow */
+  .slideshow-container {
+    max-width: 800;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Stili per le singole slide */
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+
+  /* Stili per l'immagine all'interno delle slide */
+  .mySlides img {
+    width: fit-content;
+    max-height: 70vh;
+    margin: auto;
+  }
+
+  /* Stili per il punto attuale (active) */
+  .active {
+    background-color: #717171;
+  }
+</style>
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName('mySlides');
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = 'block';
+
+    setTimeout(showSlides, 5000); // Change slide every 2 seconds (2000 milliseconds)*/
+  }
+</script>
