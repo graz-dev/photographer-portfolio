@@ -1,34 +1,6 @@
 ---
 import type { NavLink } from "../models/NavLink";
 
-/*const links = [
-  {
-    ref: '01',
-    name: 'Home',
-    href: '/',
-  },
-  {
-    ref: '02',
-    name: 'About',
-    href: '/about',
-  },
-  {
-    ref: '03',
-    name: 'Galleries',
-    href: '/galleries',
-  },
-  {
-    ref: '03',
-    name: 'Contact',
-    href: '/contact',
-  },
-  {
-    ref: '05',
-    name: 'Journal',
-    href: '/journal',
-  },
-];*/
-
 interface Props {
   navName: string;
   navDescription: string;
@@ -53,13 +25,6 @@ const { navName, navDescription, links } = Astro.props;
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
         <span class="sr-only">{navName}</span>
-        <!--<img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        />-->
         <h1 class="lg:text-9xl text-4xl font-medium tracking-tight sm:text-2xl">
           {navName}
         </h1>
@@ -162,43 +127,41 @@ const { navName, navDescription, links } = Astro.props;
         <p
           class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
         >
-          <span class="font-medium"
-            >I’m an Italian lad who has ingeniously fused his two greatest
-            passions: photography and travel, weaving captivating tales of the
-            places and people he encounters through his evocative imagery.
-          </span>
+          I’m an Italian lad who has ingeniously fused his two greatest
+          passions: photography and travel, weaving captivating tales of the
+          places and people he encounters through his evocative imagery.
         </p>
-
-        <!-- Navigation -->
-        <nav
-          class="divide-primary-900/10 dark:divide-primary-300/10 flex flex-col gap-1 divide-y"
-        >
-          {
-            links.map((link) => (
-              <a
-                href={link.href}
-                class="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
-              >
-                <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
-                  <div class="flex items-center gap-6">
-                    <span class="text-xs">{link.ref}</span>
-                    <span class="group-hover:underline">{link.name}</span>
-                  </div>
-                  <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
-                  </svg>
-                </div>
-              </a>
-            ))
-          }
-        </nav>
       </div>
+
+      <!-- Navigation -->
+      <nav
+        class="divide-primary-900/10 dark:divide-primary-300/10 flex flex-col gap-1 divide-y"
+      >
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
+            >
+              <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                <div class="flex items-center gap-6">
+                  <span class="text-xs">{link.ref}</span>
+                  <span class="group-hover:underline">{link.name}</span>
+                </div>
+                <svg
+                  class="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                </svg>
+              </div>
+            </a>
+          ))
+        }
+      </nav>
     </div>
   </div>
 </header>
