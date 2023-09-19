@@ -1,37 +1,8 @@
 ---
 import type { GalleryItem } from "../models/GalleryItem";
 import MasonryGallery from "./MasonryGallery.astro";
+import configurations from "../../photographer-portfolio";
 
-const slidePhotos = [
-  {
-    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-    alt: "Hero picture",
-  },
-  {
-    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-    alt: "Hero picture",
-  },
-  {
-    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
-    alt: "Hero picture",
-  },
-  {
-    src: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-    alt: "Hero picture",
-  },
-  {
-    src: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
-    alt: "Hero picture",
-  },
-];
-
-interface Props {
-  title: string;
-  subtitle: string;
-  gallery: GalleryItem[]
-}
-
-const { title, subtitle, gallery } = Astro.props;
 ---
 
 <section class="py-16 sm:py-20">
@@ -42,16 +13,16 @@ const { title, subtitle, gallery } = Astro.props;
           <h1
             class="lg:text-9xl text-4xl font-medium tracking-tight sm:text-5xl"
           >
-            {title}
+            {configurations.homepage.title}
           </h1>
           <p
             class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl"
           >
-            {subtitle}
+            {configurations.homepage.subtitle}
           </p>
         </div>
       </div>
-      <MasonryGallery photos={gallery} />
+      <MasonryGallery />
     </div>
   </div>
 </section>

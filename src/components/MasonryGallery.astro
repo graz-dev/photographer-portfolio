@@ -1,22 +1,16 @@
 ---
-import type { GalleryItem } from '../models/GalleryItem';
-
-interface Props {
-  photos: GalleryItem[];
-}
-
-const { photos } = Astro.props;
+import configurations from '../../photographer-portfolio';
 
 ---
 
 <section class="py-16 sm:py-20">
   <div class="masonry-gallery">
     {
-      photos.map((photo) => (
+      configurations.homepage.gallery.map((photo) => (
         <div class="grid-item lightbox-image">
           <img
             class="hover-image"
-            src={photo.src}
+            src={photo.source}
             alt={photo.title}
             loading="lazy"
           />

@@ -1,13 +1,8 @@
 ---
 import type { NavLink } from "../models/NavLink";
+import navbaritems from "../config/navbar";
 
-interface Props {
-  navName: string;
-  navDescription: string;
-  links: NavLink[];
-}
-
-const { navName, navDescription, links } = Astro.props;
+import configurations from "../../photographer-portfolio";
 ---
 
 <header
@@ -24,12 +19,12 @@ const { navName, navDescription, links } = Astro.props;
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
-        <span class="sr-only">{navName}</span>
+        <span class="sr-only">{configurations.header.title}</span>
         <h1 class="lg:text-9xl text-4xl font-medium tracking-tight sm:text-2xl">
-          {navName}
+          {configurations.header.title}
         </h1>
         <h2 class="lg:text-9xl text-xl font-medium tracking-tight sm:text-xs">
-          {navDescription}
+          {configurations.header.desciption}
         </h2>
       </a>
     </div>
@@ -73,7 +68,7 @@ const { navName, navDescription, links } = Astro.props;
       </button>
 
       <!-- Toggle menu -->
-      <button
+      <!--<button
         type="button"
         class="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
         @click="open = !open"
@@ -107,7 +102,7 @@ const { navName, navDescription, links } = Astro.props;
             d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
           ></path>
         </svg>
-      </button>
+      </button>-->
     </div>
   </div>
 
@@ -127,9 +122,7 @@ const { navName, navDescription, links } = Astro.props;
         <p
           class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
         >
-          I’m an Italian lad who has ingeniously fused his two greatest
-          passions: photography and travel, weaving captivating tales of the
-          places and people he encounters through his evocative imagery.
+          {configurations.header.caption}
         </p>
       </div>
 
@@ -138,14 +131,14 @@ const { navName, navDescription, links } = Astro.props;
         class="divide-primary-900/10 dark:divide-primary-300/10 flex flex-col gap-1 divide-y"
       >
         {
-          links.map((link) => (
+          configurations.header.items.map((link) => (
             <a
-              href={link.href}
+              href={link.link}
               class="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
             >
               <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                 <div class="flex items-center gap-6">
-                  <span class="text-xs">{link.ref}</span>
+                  <span class="text-xs">{link.reference}</span>
                   <span class="group-hover:underline">{link.name}</span>
                 </div>
                 <svg
