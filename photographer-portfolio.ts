@@ -41,24 +41,68 @@ const configurations = {
     subtitle: "Exploring the world through the lens of the everyday.",
     gallery: [
       {
-        source: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-        title: "Hero picture",
+        source: "https://drive.google.com/uc?id=16ZDhDUwC3ZGSydYbsdImEjpa51GcgNmc",
+        title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-        title: "Hero picture",
+        source: "https://drive.google.com/uc?id=1Cpxolk4eHewwAVsKjHzH-WWhJmxVHfD5",
+        title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
-        title: "Hero picture",
+        source: "https://drive.google.com/uc?id=1Jl2fgSWvOq_mWOy4a54QDVo2my4ChECB",
+        title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1Vx5Zha1vjx7d6ar-FSarZux8d882slx9",
-        title: "Hero picture",
+        source: "https://drive.google.com/uc?id=1S-IU3PjeEAejZZTw2MF17GQ_4v_sgm-D",
+        title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1cOeAWSd5ceZUnpAqscIhY8q7l0CDvAYy",
-        title: "Hero picture",
+        source: "https://drive.google.com/uc?id=1kH0-1l8lMDe6UppmH4akgz0hRpaSBg0E",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1iXAb1Vx2rlUDtdPvzHkRx6vXQdVaqLA_",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1auGCubqiflPLJ5TkwzG-YyvwP1mRpfom",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1evjDh_xAejVd836ppXSLhV6omqWxMCdN",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1Nphi_mpBYSCIY4EtJvGE968ukwPjq6dT",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1UzyfYSegUxxY0dmMqRz02axC1cdEAccb",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1pR1-yPUYmcLyG3AjFSFXfj_j4lJve5AW",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1LE7-n1vpj4KC4O4wuDKw7U3GHOvNR2v8",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1DGFznMjIi9MaapHTqHdFd4HaUHlYUdfA",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1cCbgDEd10jvN-qNVE7KBefOHjnxHgRGn",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=1dskV4xEAnoImjr8lGigBeim6_xR7h3qS",
+        title: "",
+      },
+      {
+        source: "https://drive.google.com/uc?id=19dW03j9_t4fTDNl4zKutNQlD0z0nOtXU",
+        title: "",
       },
     ],
   },
