@@ -3,14 +3,18 @@ import "@fontsource/inter/latin-400.css";
 import "@fontsource/inter/latin-500.css";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/layout/Footer.astro";
-import Header from "../components/layout/Header.astro";
+import Header from "../components/Header.astro";
+import type { NavLink } from "../models/NavLink";
 
 interface Props {
   description: string;
   title: string;
+  navName: string;
+  navDescription: string;
+  navLinks: NavLink[];
 }
 
-const { description, title } = Astro.props;
+const { description, title, navName, navDescription, navLinks } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,7 +34,10 @@ const { description, title } = Astro.props;
   <body
     class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
-    <Header />
+    <Header
+    navName={navName}
+    navDescription={navDescription} 
+    links={navLinks}/>
     <main>
       <slot />
     </main>

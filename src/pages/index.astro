@@ -6,13 +6,33 @@ import Hero from '../components/Hero.astro';
 import Services from '../components/home/Services.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import Layout from '../layouts/Layout.astro';
+import { Configuration } from '../models/Configuration';
+
+const siteConfig = new Configuration(
+  "Graziano Casto · Street Photography",
+  "Graziano Casto · Street Photography",
+  "Graziano Casto",
+  "Street Photography & Reportage",
+  "Capturing the essence of everyday life, one street at a time.",
+  "Exploring the world through the lens of the everyday."
+  );
+
+  console.log(siteConfig);
+
 ---
 
 <Layout
-  description="AAAAAAA"
-  title="Graziano Casto · Street Photography"
+  description={siteConfig.siteTitle}
+  title={siteConfig.siteDescription}
+  navName={siteConfig.homepageConfig.siteNameNavbar}
+  navDescription={siteConfig.homepageConfig.siteDescriptionNavbar}
+  navLinks={siteConfig.navbar}
 >
-  <Hero />
+  <Hero
+    title={siteConfig.homepageConfig.siteTitle}
+    subtitle={siteConfig.homepageConfig.siteSubtitle}
+    gallery={siteConfig.gallery}
+ />
  <!-- <Services />
   <Expertise />
   <About />

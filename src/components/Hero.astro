@@ -1,4 +1,5 @@
 ---
+import type { GalleryItem } from "../models/GalleryItem";
 import MasonryGallery from "./MasonryGallery.astro";
 
 const slidePhotos = [
@@ -23,6 +24,14 @@ const slidePhotos = [
     alt: "Hero picture",
   },
 ];
+
+interface Props {
+  title: string;
+  subtitle: string;
+  gallery: GalleryItem[]
+}
+
+const { title, subtitle, gallery } = Astro.props;
 ---
 
 <section class="py-16 sm:py-20">
@@ -33,16 +42,16 @@ const slidePhotos = [
           <h1
             class="lg:text-9xl text-4xl font-medium tracking-tight sm:text-5xl"
           >
-            Capturing the essence of everyday life, one street at a time.
+            {title}
           </h1>
           <p
             class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl"
           >
-            Exploring the world through the lens of the everyday.
+            {subtitle}
           </p>
         </div>
       </div>
-      <MasonryGallery photos={slidePhotos} />
+      <MasonryGallery photos={gallery} />
     </div>
   </div>
 </section>
