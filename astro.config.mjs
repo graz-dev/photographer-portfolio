@@ -8,5 +8,8 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind(), compress()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  image: {
+    domains: ["drive.google.com"],
+  }
 });

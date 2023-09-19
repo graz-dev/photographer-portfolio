@@ -9,10 +9,9 @@ import configurations from '../../photographer-portfolio';
       configurations.homepage.gallery.map((photo) => (
         <div class="grid-item lightbox-image">
           <img
-            class="hover-image"
             src={photo.source}
             alt={photo.title}
-            loading="lazy"
+            class="hover-image"
           />
           <div class="image-title">{photo.title}</div>
         </div>
