@@ -1,0 +1,17 @@
+---
+import configurations from "../../photographer-portfolio";
+---
+
+<section class="py-16 sm:py-20">
+  <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    {
+      configurations.about.statistics.items.length > 0 ? 
+      configurations.about.statistics.items.map((stat) => (
+        <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
+          <dt class="text-base">{stat.name}</dt>
+          <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+        </div>
+      )) : <div style="display: none;"></div>
+    }
+  </dl>
+</section>
