@@ -41,67 +41,71 @@ const configurations = {
     subtitle: "Exploring the world through the lens of the everyday.",
     gallery: [
       {
-        source: "https://drive.google.com/uc?id=16ZDhDUwC3ZGSydYbsdImEjpa51GcgNmc",
+        source: "/gallery/travel-1.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1Cpxolk4eHewwAVsKjHzH-WWhJmxVHfD5",
+        source: "/gallery/travel-2.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1Jl2fgSWvOq_mWOy4a54QDVo2my4ChECB",
+        source: "/gallery/travel-3.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1S-IU3PjeEAejZZTw2MF17GQ_4v_sgm-D",
+        source: "/gallery/travel-4.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1kH0-1l8lMDe6UppmH4akgz0hRpaSBg0E",
+        source: "/gallery/travel-5.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1iXAb1Vx2rlUDtdPvzHkRx6vXQdVaqLA_",
+        source: "/gallery/travel-6.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1auGCubqiflPLJ5TkwzG-YyvwP1mRpfom",
+        source: "/gallery/street-1.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1evjDh_xAejVd836ppXSLhV6omqWxMCdN",
+        source: "/gallery/street-2.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1Nphi_mpBYSCIY4EtJvGE968ukwPjq6dT",
+        source: "/gallery/street-3.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1UzyfYSegUxxY0dmMqRz02axC1cdEAccb",
+        source: "/gallery/street-4.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1pR1-yPUYmcLyG3AjFSFXfj_j4lJve5AW",
+        source: "/gallery/street-5.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1LE7-n1vpj4KC4O4wuDKw7U3GHOvNR2v8",
+        source: "/gallery/street-6.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1DGFznMjIi9MaapHTqHdFd4HaUHlYUdfA",
+        source: "/gallery/street-7.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1cCbgDEd10jvN-qNVE7KBefOHjnxHgRGn",
+        source: "/gallery/street-8.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=1dskV4xEAnoImjr8lGigBeim6_xR7h3qS",
+        source: "/gallery/street-9.webp",
         title: "",
       },
       {
-        source: "https://drive.google.com/uc?id=19dW03j9_t4fTDNl4zKutNQlD0z0nOtXU",
+        source: "/gallery/street-10.webp",
+        title: "",
+      },
+      {
+        source: "/gallery/street-11.webp",
         title: "",
       },
     ],
