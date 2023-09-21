@@ -1,6 +1,6 @@
 # Photographer Portfolio
 
-![cover](https://github.com/graz-dev/photograper-portfolio/assets/62215881/2c597a50-7e17-4a63-b579-8610e2fc1071)
+![cover](https://github.com/graz-dev/photographer-portfolio/assets/62215881/d103ac45-e872-4393-9e72-178de117c686)
 
 ### [Live Demo]()
 
