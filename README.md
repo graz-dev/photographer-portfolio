@@ -35,7 +35,7 @@ Support the project by leaving a star here on GitHub and following me on my soci
 
 ## Configurations
 
-```json
+```
 
 site: {
     title: "Photographer · Portfolio",
