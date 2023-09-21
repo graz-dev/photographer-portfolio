@@ -1,0 +1,11 @@
+---
+import ContactForm from "../components/ContactForm.astro";
+import RowCardList from "../components/RowCardList.astro";
+import Layout from "../layouts/Layout.astro";
+import configurations from "../../photographer-portfolio";
+---
+
+<Layout>
+  {configurations.contacts.rowCards.enabled && <RowCardList />}
+  <ContactForm />
+</Layout>

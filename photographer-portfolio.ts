@@ -23,13 +23,13 @@ const configurations = {
         reference: "03",
         name: "Galleries",
         link: "/galleries",
-      },
+      },*/
       {
         reference: "03",
         name: "Contact",
         link: "/contact",
       },
-      {
+      /*{
         reference: "05",
         name: "Journal",
         link: "/journal",
@@ -160,6 +160,7 @@ const configurations = {
       },
     ],
     statistics: {
+      enabled: false,
       title: "",
       subtitle: "",
       items: [
@@ -170,7 +171,8 @@ const configurations = {
         },*/
       ],
     },
-    cards: {
+    columnCards: {
+      enabled: false,
       title: "",
       columns: [
         [
@@ -183,6 +185,28 @@ const configurations = {
       ],
     },
   },
+  contacts: {
+    rowCards: {
+      enabled: false,
+      items: [
+        {
+          title: "",
+          svgIcon: "",
+          paragraphs: [
+            {
+              ref: 1,
+              content: ""
+            }
+          ]
+        }
+      ]
+    },
+    contactForm: {
+      title: "Contact me",
+      subtitle: "Let's keep in touch",
+      action: "https://formspree.io/f/mleyplqo"
+    }
+  }
 };
 
 export default configurations;
