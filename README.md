@@ -37,6 +37,7 @@ Support the project by leaving a star here on GitHub and following me on my soci
 
 ```
 
+{
 site: {
     title: "Photographer · Portfolio",
     description: "Photographer · Portfolio",
@@ -182,6 +183,7 @@ site: {
       action: "",
     },
   },
+}
 }
 
 ```
