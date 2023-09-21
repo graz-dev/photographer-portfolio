@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import StatsList from "../components/StatsList.astro";
-import ColumnCardList from "../components/ColumnCardList.astro";
 import configurations from "../../photographer-portfolio";
 ---
 
@@ -42,6 +40,4 @@ import configurations from "../../photographer-portfolio";
       </div>
     </div>
   </div>
-  {configurations.about.statistics.enabled && <StatsList />}
-  {configurations.about.columnCards.enabled && <ColumnCardList />}
 </Layout>
