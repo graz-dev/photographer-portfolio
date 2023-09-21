@@ -2,7 +2,7 @@
 
 ![cover](https://github.com/graz-dev/photographer-portfolio/assets/62215881/d103ac45-e872-4393-9e72-178de117c686)
 
-### [Live Demo]()
+### [Live Demo](https://ph-portfolio-bay.vercel.app/)
 
 In today's world, having a website is like carving out a piece of the digital realm just for yourself. This is especially crucial for creative professionals who need their own space to showcase their work. Unfortunately, if you lack technical know-how, it can often be too complicated for the average person to publish their work somewhere other than social media, creating their own portfolio.
 
@@ -13,11 +13,13 @@ That's where this project comes in: to empower everyone, whether they have techn
 This project enables anyone to create a photography portfolio with the following features:
 
 1. [X] Homepage with a Masonry Gallery component to showcase your photos
-2. [X] Lightbox feature for the Masonry Gallery component
-3. [X] Preventing unauthorized file downloads to safeguard your photos from being reused without consent.
-4. [X] About and Contact Pages with Email Subscription Capability
-5. [X] Entire website fully configurable via a single configuration file - no need to change your code!
-6. [X] Easily deployable on [Vercel](https://vercel.com/)
+2. [X] Possibility to switch between light and dark mode
+3. [X] Responsive design
+4. [X] Lightbox feature for the Masonry Gallery component
+5. [X] Preventing unauthorized file downloads to safeguard your photos from being reused without consent.
+6. [X] About and Contact Pages with Email Subscription Capability
+7. [X] Entire website fully configurable via a single configuration file - no need to change your code!
+8. [X] Easily deployable on [Vercel](https://vercel.com/)
 
 Numerous features are in the pipeline for development in the upcoming period, including:
 
